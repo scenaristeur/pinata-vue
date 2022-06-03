@@ -3,6 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import PinataPlugin from './plugins/pinata-plugin';
+Vue.use(PinataPlugin, {store: store});
 
 Vue.config.productionTip = false
 

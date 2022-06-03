@@ -19,6 +19,8 @@
     <b-button @click="pinata_login" variant="primary">Connect Pinata</b-button>
     <b-button href="https://www.pinata.cloud/" variant="outline-primary">I don't have Pinata</b-button>
     <b-button href="https://docs.ipfs.io/how-to/work-with-pinning-services/#use-an-existing-pinning-service" target="_blank">What is Pinata</b-button>
+    <b-button @click="pinata_logout" variant="outline-warning">Logout Pinata</b-button>
+
 
 
   </b-card>
@@ -27,17 +29,22 @@
 
 <script>
 export default {
-name: "PinataLogin",
-data(){
-  return {
-    pinata: {}
-  }
-},
-methods: {
-  pinata_login(){
-
-  }
-}
+  name: "PinataLogin",
+  data(){
+    return {
+      pinata: {}
+    }
+  },
+  methods: {
+    pinata_login(){
+      this.$pinataTestAuthentication()
+    },
+    pinata_logout(){
+      if (confirm("Are you sure you want to deconnect Pinata ? You probably will have to regenerate new keys if you don't have save them")) {
+        console.log("todo logout")
+      }
+    },
+    }
 }
 </script>
 

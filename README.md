@@ -46,4 +46,9 @@ git add dist -f && git commit -m "Initial dist subtree commit"
 npm run build && git add . git commit -m "gh-pages branch" git push && git subtree push --prefix dist origin gh-pages
 ```
 - then other times run
- ``` npm run git -- "mymodif"```
+ ``` npm run git -- "mymodif"
+ ```
+
+
+# ipfs hosting
+ - https://deep75.medium.com/d%C3%A9centraliser-son-site-web-avec-ipfs-pinata-infura-et-cloudflare-e16b3564d3d6

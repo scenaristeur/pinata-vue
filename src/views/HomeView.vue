@@ -2,7 +2,12 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <PinataLogin />
+    <b-container>
+      <b-row>
+        <PinataLogin class="m-2" />
+        <PinataList class="m-2" />
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -14,9 +19,10 @@ export default {
   name: 'HomeView',
   components: {
     'PinataLogin': ()=>import('@/views/PinataLogin'),
+    'PinataList': ()=>import('@/views/PinataList'),
   },
   mounted(){
-    this.$testAuthentication()
+    this.$pinataGetCredentials()
   }
 }
 </script>
